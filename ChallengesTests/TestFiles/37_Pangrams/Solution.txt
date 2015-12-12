@@ -1,0 +1,64 @@
+﻿using System.IO;
+using System.Collections.Generic;
+using System.Linq;
+using System;
+using CodeevalChallenges;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+       _37_Pangrams pangram;
+            char[] missingletters;
+            using (StreamReader reader = File.OpenText(args[0]))
+                while (!reader.EndOfStream)
+                {
+                    string line = reader.ReadLine();
+                    if (null == line)
+                        continue;
+
+                    pangram = new _37_Pangrams(line);
+                    missingletters = pangram.missingLetters();
+                    if (missingletters.Length == 0)
+                    {
+                        Console.WriteLine("NULL");
+                     
+                    }else{
+                       Console.WriteLine(string.Join("", missingletters));  
+                    }
+
+                      
+                }
+    }
+}
+
+namespace CodeevalChallenges
+{
+    public class _37_Pangrams
+    {
+
+        public _37_Pangrams(string text)
+        {
+            this.text = text.ToLower();
+        }
+
+        public string text { get; private set; }
+
+        public char[] missingLetters()
+        {
+            int textLength = this.text.Length;
+
+            char[] letters = new char[textLength];
+            using (StringReader sr = new StringReader(this.text))
+            {
+                sr.Read(letters, 0, textLength);
+            }
+
+            int[] textCharCodes = (from i in letters select (int)i).ToArray();
+            int[] alphabetCodes = Enumerable.Range(97, 26).Select(x => x).ToArray();
+
+            return (from i in alphabetCodes where !textCharCodes.Contains(i) select (char)i).OrderBy(i=> i).ToArray();
+
+        }
+    }
+}

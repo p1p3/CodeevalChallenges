@@ -52,13 +52,14 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="19_BigPositions.cs" />
-    <Compile Include="37_Pangram.cs" />
+    <Compile Include="TestFiles\19_BigPositions\19_BigPositions.cs" />
+    <Compile Include="TestFiles\37_Pangrams\37_Pangram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="TestFiles\19_BigPositions\Files.txt" />
     <Content Include="TestFiles\19_BigPositions\Solution.txt" />
+    <Content Include="TestFiles\37_Pangrams\Solution.txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CodeevalChallenges\CodeevalChallenges.csproj">
@@ -67,7 +68,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="TestFiles\37_Pangrams\" />
+    <Folder Include="TestFiles\13_RemoveCharacters\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
