@@ -11,7 +11,7 @@ namespace ChallengesTests
         [TestMethod]
         public void BigPositionsMainTest()
         {
-            string path = @"c:\users\pipel\documents\visual studio 2015\Projects\CodeevalChallenges\ChallengesTests\TestFiles\19_BigPositions\Files.txt";
+            string path = @"../../../ChallengesTests/TestFiles/19_BigPositions/Files.txt";
             _19_BigPositions challenge = new _19_BigPositions(path);
             bool[] result = (from i in challenge.nlines select i.bitsEqual()).ToArray();
 

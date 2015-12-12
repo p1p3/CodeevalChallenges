@@ -1,0 +1,39 @@
+﻿using System.IO;
+using System.Collections.Generic;
+using System;
+using CodeevalChallenges;
+
+class Program
+{
+    static void Main(string[] args)
+        {
+            _20_Lowercase challenge;
+            using (StreamReader reader = File.OpenText(args[0]))
+                while (!reader.EndOfStream)
+                {
+                    string line = reader.ReadLine();
+                    if (null == line)
+                        continue;
+                    challenge = new _20_Lowercase(line);
+                    Console.WriteLine(challenge.GetLowerText());
+
+                }
+        }
+}
+
+namespace CodeevalChallenges
+{
+    public class _20_Lowercase
+    {
+        public _20_Lowercase(string text)
+        {
+            this.Text = text;
+        }
+
+        public string Text { get; private set; }
+        public string GetLowerText()
+        {
+            return Text.ToLower();
+        }
+    }
+}
