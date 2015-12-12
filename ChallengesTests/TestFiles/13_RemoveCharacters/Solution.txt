@@ -1,0 +1,53 @@
+﻿using System.IO;
+using System.Collections.Generic;
+using System;
+using CodeevalChallenges;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        _13_RemoveCharacters challenge;
+            string[] inputs;
+            using (StreamReader reader = File.OpenText(args[0]))
+                while (!reader.EndOfStream)
+                {
+                    string line = reader.ReadLine();
+                    if (null == line)
+                        continue;
+                    inputs = line.Split(',');
+                    challenge = new _13_RemoveCharacters(inputs[0], inputs[1]);
+                    Console.WriteLine(challenge.RemoveChars());
+
+                }
+    }
+}
+
+namespace CodeevalChallenges
+{
+   public class _13_RemoveCharacters
+    {
+
+        public _13_RemoveCharacters(string text,string letters)
+        {
+            this.text = text;
+            this.lettersToRemove = letters.ToCharArray();
+        }
+            
+
+        public string text { get; private set; }
+        public char[] lettersToRemove { get; private set; }
+
+        public string RemoveChars()
+        {
+            string tempText = this.text;
+            foreach (char rchar in this.lettersToRemove)
+            {
+                if (rchar != (char)32)
+                 tempText = tempText.Replace(rchar.ToString(), "");
+            }
+            return tempText;
+        }
+
+    }
+}

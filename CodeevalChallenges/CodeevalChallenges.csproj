@@ -43,8 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="13_RemoveCharacters.cs" />
     <Compile Include="19_BigPositions.cs" />
+    <Compile Include="20_Lowercase.cs" />
     <Compile Include="37_Pangrams.cs" />
+    <Compile Include="8_ReverseWords.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
