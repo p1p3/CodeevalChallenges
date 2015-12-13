@@ -52,23 +52,33 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="TestFiles\10_MthLastElement\10_MthLastElementTest.cs" />
+    <Compile Include="TestFiles\12_FirstNotRepeatedCharacter\12_FirstNotRepeatedCharacterTest.cs" />
     <Compile Include="TestFiles\13_RemoveCharacters\13_RemoveCharactersTest.cs" />
+    <Compile Include="TestFiles\16_NumberOfOnes\16_NumberOfOnesTest.cs" />
     <Compile Include="TestFiles\19_BigPositions\19_BigPositions.cs" />
     <Compile Include="TestFiles\20_LowerCase\20LowercaseTest.cs" />
     <Compile Include="TestFiles\26_FileSize\26_FileSizeTest.cs" />
     <Compile Include="TestFiles\37_Pangrams\37_Pangram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestFiles\41_ArrayAbsurdity\41_ArrayAbsurdityTest.cs" />
     <Compile Include="TestFiles\8_ReverseWords\8_ReverseWordsTest.cs" />
+    <Compile Include="TestFiles\93_CapitalizeWords\93_CapitalizeWordsTest.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="TestFiles\10_MthLastElement\Solution.txt" />
+    <Content Include="TestFiles\12_FirstNotRepeatedCharacter\Solution.txt" />
     <Content Include="TestFiles\13_RemoveCharacters\Solution.txt" />
+    <Content Include="TestFiles\16_NumberOfOnes\Solution.txt" />
     <Content Include="TestFiles\19_BigPositions\Files.txt" />
     <Content Include="TestFiles\19_BigPositions\Solution.txt" />
     <Content Include="TestFiles\20_LowerCase\Solution.txt" />
     <Content Include="TestFiles\26_FileSize\Solution.txt" />
     <Content Include="TestFiles\26_FileSize\testFile.txt" />
     <Content Include="TestFiles\37_Pangrams\Solution.txt" />
+    <Content Include="TestFiles\41_ArrayAbsurdity\Solution.txt" />
     <Content Include="TestFiles\8_ReverseWords\Solution.txt" />
+    <Content Include="TestFiles\93_CapitalizeWords\Solution.txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CodeevalChallenges\CodeevalChallenges.csproj">

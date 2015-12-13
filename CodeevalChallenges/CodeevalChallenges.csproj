@@ -43,12 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="10_MthLastElement.cs" />
+    <Compile Include="12_FirstNotRepeatedCharacter.cs" />
     <Compile Include="13_RemoveCharacters.cs" />
+    <Compile Include="16_NumberOfOnes.cs" />
     <Compile Include="19_BigPositions.cs" />
     <Compile Include="20_Lowercase.cs" />
     <Compile Include="26_FileSize.cs" />
     <Compile Include="37_Pangrams.cs" />
+    <Compile Include="41_ArrayAbsurdity.cs" />
     <Compile Include="8_ReverseWords.cs" />
+    <Compile Include="93_CapitalizeWords.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
